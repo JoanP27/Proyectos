@@ -1,0 +1,155 @@
+body
+{
+    margin: 0;
+    font-family: Arial;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+
+}
+header
+{
+    background-color: #11263A;
+    padding: 10px;
+    text-align: center;
+}
+header h1
+{
+    margin: 0;
+    color: white;
+    font-size: 40pt;
+    font-weight: 400;
+}
+header nav ul
+{
+    list-style-type: none;
+    text-align: end;
+    
+}
+header nav ul li
+{
+    
+    display: inline;
+}
+header nav ul a
+{
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+body#pagina-index main
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+}
+body#pagina-index main section#imagen
+{
+    background-image: url("../imgs/plato-comida.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+body#pagina-index main section#contenido
+{
+    padding: 50px;
+    line-height: 60px;
+}
+body#pagina-index main section#contenido h2
+{
+    font-size: 28pt;
+    font-weight: 500;
+    margin: 0;
+    line-height: 50px;
+
+}
+body#pagina-index main section#contenido p
+{
+    font-size: 16pt;
+    font-weight: 300;
+    line-height: 30px;
+}
+.boton
+{
+    padding: 10px 20px;
+    background-color: #D9DCDC;
+    font-size: 16pt;
+    border-radius: 10px;
+    border: none;
+}
+
+
+/*pagina cursos*/
+
+body#pagina-cursos
+{
+}
+body#pagina-cursos main
+{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    padding: 50px;
+}
+body#pagina-cursos main article.producto
+{
+    font-weight: 400;
+    line-height: 40px;
+}
+body#pagina-cursos main article.producto h3
+{
+    font-size: 20pt;
+    font-weight: 500;
+    margin: 0;
+}
+body#pagina-cursos main article.producto p
+{
+    margin: 0;
+}
+body#pagina-cursos main article.producto section
+{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    line-height: 25px;
+}
+body#pagina-cursos main article.producto hr
+{
+    border: 1px solid #D9DCDC;
+}
+footer
+{
+    padding: 30px;
+    background-color: #D9DCDC;
+    text-align: center;
+}
+body#pagina-contacto main
+{
+    padding: 50px;
+}
+body#pagina-contacto main form section
+{
+    padding: 10px;
+}
+body#pagina-contacto h2
+{
+    font-size: 30pt;
+    margin: 0;
+}
+body#pagina-contacto label
+{
+    font-weight: 500;
+    font-size: 18pt;
+}
+body#pagina-contacto input
+{
+    width: 100%;
+    border: 1px solid #9da3a3;
+    padding: 10px 0px;
+    border-radius: 9px;
+}
+body#pagina-contacto button
+{
+    margin-top: 10px;
+    float: right;
+}
+

@@ -2,7 +2,9 @@
 
 
 const previewImagen = document.getElementById("image-preview");
-const formImagen = document.getElementById("image")
+const formImagen = document.getElementById("image");
+const formulario = document.getElementById("task-form");
+
 formImagen.addEventListener("input", function(event)
 {
     previewImagen.src = "";
@@ -15,10 +17,11 @@ formImagen.addEventListener("input", function(event)
         previewImagen.classList.remove("hidden");
 
     }) 
-    if(!archivo.type.startsWith("image"))
+
+    if(archivo && !archivo.type.startsWith("image"))
     {
         event.target.setCustomValidity("El archivo debe ser una imagen")
-    }else if(archivo.size > 200000) {
+    }else if(archivo && archivo.size > 200000) {
         event.target.setCustomValidity("No puedes subir una imagen de mas de 200KB");
     }
     else
@@ -27,7 +30,10 @@ formImagen.addEventListener("input", function(event)
     }
 })
 
-//TODO Usar API contraint validation
+//TODO Usar API contraint validation)
+//TODO Transformar fecha al español
+//TODO Añade la card de la tarea al DOM (Puede que ya este terminado y no este seguro de a que se refiere)
+// Añade el evento de click al boton de borrado (button.delete-btn
 
 const taskForm = document.getElementById("task-form");
 const taskTemplate = document.getElementById("task-template")
@@ -43,7 +49,10 @@ taskForm.addEventListener("submit", function(event)
         deadLine: taskForm["deadLine"].value,
         status: 0
     }
-    crearTarea(datosForm)
+    crearTarea(datosForm);
+    formulario.reset();
+    previewImagen.src = "";
+    previewImagen.classList.add("hidden")
 })
 
 

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Noticias UA</title>
+    <style>
+        section > strong 
+        {
+            color: blue;
+        }
+        strong + em
+        {
+            font-style: italic;
+        }
+        h1 + p
+        {
+            color: gray;
+        }
+        a[href^="https://www.ua.es"]
+        {
+            color: green;
+        }
+        a[href$=".com"]
+        {
+            color: purple;
+        }
+    </style>
+</head>
+<body>
+    <h1>Noticias de la Universidad de Alicante</h1>
+
+    <p>Consulta nuestras últimas publicaciones sobre ciencia y tecnología.</p>
+
+    <section class="noticia">
+        <h2>Investigación en Energías Renovables</h2>
+        <p>La Universidad de Alicante lidera un nuevo proyecto europeo.</p>
+        <strong>Importante:</strong> <em>El proyecto comenzará en enero de 2026.</em>
+        <p>Más información en <a href="https://www.ua.es">la web oficial</a>.</p>
+    </section>
+
+    <section class="noticia destacada">
+        <h2>Conferencia sobre IA</h2>
+        <p>El evento contará con ponentes internacionales.</p>
+        <strong>Atención:</strong> <em>Las plazas son limitadas.</em>
+        <p>Inscríbete en <a href="https://eventos.ua.es/ia2025" class="btn registro">este enlace</a>.</p>
+    </section>
+
+    <p>Visita también <a href="https://www.universidades.com">otros portales educativos</a>.</p>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!-- saved from url=(0082)https://nachoiborraies.github.io/htmlcss/recursos/03d_ejercicio_accesibilidad.html -->
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi web accesible</title>
+  <style>
+    body { font-family: system-ui, Roboto, Arial, sans-serif; margin: 0; line-height: 1.4; }
+    .parrafo1 { color:#2c2c2c; } 
+    .titulo { background-color: burlywood; color:rgb(168, 71, 2);}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Mi Web</h1>
+    <nav>
+      <a href="https://nachoiborraies.github.io/htmlcss/recursos/03d_ejercicio_accesibilidad.html#inicio">Inicio</a>
+      <a href="https://nachoiborraies.github.io/htmlcss/recursos/03d_ejercicio_accesibilidad.html#servicios">Servicios</a>
+      <a href="https://nachoiborraies.github.io/htmlcss/recursos/03d_ejercicio_accesibilidad.html#contacto">Contacto</a>
+    </nav>
+  </header>
+  
+  <main class="container">
+
+    <h1 id="inicio">Bienvenidos</h1>
+    <h2>Sobre nosotros</h2>
+    <p class="parrafo1">Somos una empresa dedicada a ofrecer soluciones innovadoras para todos los públicos. Este texto tiene contraste bajo.</p>
+
+    <section id="servicios">
+      <h2 id="titulo" class="titulo">Nuestros servicios</h2>
+      <img src="https://via.placeholder.com/600x200?text=Banner+Informativo" alt="banner informativo">
+      <p>Novedad: ¡lanzamos una nueva línea de productos!</p>
+      <ul>
+        <li>Consultoría</li>
+        <li>Desarrollo web</li>
+        <li>Formación</li>
+      </ul>
+    </section>
+
+    <section class="card" id="contacto">
+      <h2 id="titulo">Contacto</h2>
+
+      <form action="https://nachoiborraies.github.io/htmlcss/recursos/03d_ejercicio_accesibilidad.html#">
+        <div>
+          <label for="nombre">Nombre</label>
+          <input id="nombre" type="text" name="nombre" placeholder="Nombre">
+        </div>
+        <div>
+          <label for="correo1">Correo</label>
+          <input id="correo1" type="email" id="correo" name="correo" placeholder="ejemplo@correo.com">
+        </div>
+        <div>
+          <label for="telefono">Telefono</label>
+          <input id="telefono" type="text" name="telefono" placeholder="Teléfono">
+        </div>
+        <div>
+          <button type="submit" class="btn-primary">Enviar</button>
+        </div>
+      </form>
+    </section>        
+  </main>
+
+</body></html>

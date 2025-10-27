@@ -1,0 +1,32 @@
+:root
+{
+    --background-color-dark: #141618;
+}
+body
+{
+    background-color: var(--background-color-dark);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+}
+section#item-container
+{
+    padding: 20px;
+    display: grid;
+    grid-template-columns:repeat(auto-fit, minmax(120px, 1fr));
+    gap: 30px;
+}
+section#item-container .browser-item
+{
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 9px;
+}
+section#item-container .browser-item p
+{
+    margin: 0;
+}
+section#item-container .browser-item:hover
+{
+    background-color: #33393f6b;
+}

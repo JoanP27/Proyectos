@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Registro al evento</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Inscripción al evento</h1>
+        <form class="form-registro" action="pagina.php">
+            <fieldset>
+                <legend>Datos personales</legend>
+                <label>
+                    Nombre completo
+                    <input type="text" name="nombre" placeholder="Tu nombre" required>
+                </label>
+                <label>
+                    Correo electrónico
+                    <input type="email" name="email" placeholder="tucorreo@dominio.com" required>
+                </label>
+                <label>
+                    Contraseña (mín. 8, 1 número)
+                    <input type="password" name="pass"
+                        pattern="(?=.*\d).{8,}" required
+                        placeholder="••••••••">
+                </label>
+                <label>
+                    Edad (18–120)
+                    <input type="number" name="edad" min="18" max="120" required>
+                </label>
+                <label>
+                    Sitio web (opcional)
+                    <input type="url" name="web" placeholder="https://...">
+                </label>
+            </fieldset>
+            <fieldset>
+                <legend>Comentarios</legend>
+                <textarea name="comentarios" rows="4" placeholder="Observaciones..."></textarea>
+            </fieldset>
+            <label class="acepto">
+                <input type="checkbox" name="legal" required>
+                Acepto las condiciones
+            </label>
+            <button type="submit" class="btn">Enviar inscripción</button>
+        </form>
+    </main>
+</body>
+</html>

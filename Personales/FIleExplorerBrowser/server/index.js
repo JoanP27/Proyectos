@@ -19,3 +19,16 @@ app.get('/', (req, res) => {
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en http://localhost:${PORT}`);
 });
+
+app.get('/listFiles', (req, res) => {
+    const fr = new fileReader();
+    let result = fr.listarArchivos();
+    
+    lista = []
+
+    result.array.forEach(element => {
+        lista.append()
+    });
+
+    res.status(200).send(fr.listarArchivos());
+})

@@ -14,6 +14,7 @@ export class fileReader
         try {
             const archivos = await readdir(this.#ruta);
             console.log(archivos);
+            return archivos.toArray();
         } catch (err) {
             console.error("Error al leer la carpeta:", err);
         }

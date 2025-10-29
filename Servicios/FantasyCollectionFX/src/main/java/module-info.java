@@ -4,5 +4,7 @@ module edu.joan.fantasyfx {
 
 
     opens edu.joan.fantasyfx to javafx.fxml;
+    opens edu.joan.fantasyfx.model to javafx.base;
     exports edu.joan.fantasyfx;
+    exports edu.joan.fantasyfx.model;
 }

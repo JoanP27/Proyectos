@@ -2,6 +2,8 @@ package edu.joan.fantasyfx.model;
 
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeFormatterBuilder;
 
 public class Item implements Serializable {
     private String code;
@@ -56,7 +58,9 @@ public class Item implements Serializable {
     }
 
     public LocalDate getDate() {
-        return date;
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd - MMMM - yyyy");
+        formatter.format(date);
+        return this.date;
     }
 
     public void setDate(LocalDate date) {

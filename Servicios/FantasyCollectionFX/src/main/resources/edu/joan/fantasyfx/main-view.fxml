@@ -15,7 +15,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.joan.fantasyfx.MainController">
   <columnConstraints>
     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
   </columnConstraints>
@@ -25,10 +25,13 @@
     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
-      <TableView fx:id="tv" prefHeight="215.0" prefWidth="580.0">
+      <TableView fx:id="tvItems" prefHeight="215.0" prefWidth="580.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="C1" />
-          <TableColumn prefWidth="75.0" text="C2" />
+          <TableColumn prefWidth="75.0" text="Code" fx:id="colCode"/>
+          <TableColumn prefWidth="75.0" text="Name" fx:id="colName"/>
+          <TableColumn prefWidth="75.0" text="Type" fx:id="colType"/>
+          <TableColumn prefWidth="75.0" text="Rarity" fx:id="colRarity"/>
+          <TableColumn prefWidth="75.0" text="Obtained" fx:id="colObtained"/>
         </columns>
       </TableView>
       <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="2">
@@ -37,14 +40,14 @@
                <children>
                   <HBox alignment="CENTER_LEFT" prefHeight="33.0" prefWidth="295.0" spacing="80.0">
                      <children>
-                        <Label fx:id="lb_code" prefHeight="17.0" prefWidth="90.0" text="Code" />
-                        <TextField fx:id="tf_code" prefHeight="25.0" prefWidth="185.0" />
+                        <Label fx:id="lbCode" prefHeight="17.0" prefWidth="90.0" text="Code" />
+                        <TextField fx:id="txCode" prefHeight="25.0" prefWidth="185.0" />
                      </children>
                   </HBox>
                   <HBox alignment="CENTER_LEFT" prefHeight="33.0" prefWidth="302.0" spacing="80.0">
                      <children>
-                        <Label fx:id="lb_name" prefHeight="17.0" prefWidth="75.0" text="Name" />
-                        <TextField fx:id="tf_name" prefHeight="25.0" prefWidth="185.0" />
+                        <Label fx:id="lbName" prefHeight="17.0" prefWidth="75.0" text="Name" />
+                        <TextField fx:id="txName" prefHeight="25.0" prefWidth="185.0" />
                      </children>
                   </HBox>
                </children>
@@ -56,14 +59,14 @@
                <children>
                   <HBox alignment="CENTER_LEFT" prefHeight="33.0" prefWidth="293.0" spacing="80.0">
                      <children>
-                        <Label fx:id="lb_type" prefHeight="17.0" prefWidth="53.0" text="Type" />
-                        <ChoiceBox fx:id="cb_type" prefHeight="25.0" prefWidth="87.0" />
+                        <Label fx:id="lbType" prefHeight="17.0" prefWidth="53.0" text="Type" />
+                        <ChoiceBox fx:id="cbType" prefHeight="25.0" prefWidth="87.0" />
                      </children>
                   </HBox>
                   <HBox alignment="CENTER_LEFT" prefHeight="33.0" prefWidth="302.0" spacing="80.0">
                      <children>
-                        <Label fx:id="lb_rarity" prefHeight="17.0" prefWidth="50.0" text="Rarity" />
-                        <ChoiceBox fx:id="cb_rarity" prefHeight="25.0" prefWidth="91.0" />
+                        <Label fx:id="lbRarity" prefHeight="17.0" prefWidth="50.0" text="Rarity" />
+                        <ChoiceBox fx:id="cbRarity" prefHeight="25.0" prefWidth="91.0" />
                      </children>
                   </HBox>
                </children>
@@ -72,25 +75,25 @@
                <children>
                   <HBox alignment="CENTER_LEFT" prefHeight="32.0" prefWidth="376.0" spacing="10.0">
                      <children>
-                        <Label fx:id="lb_obtained" prefHeight="17.0" prefWidth="78.0" text="Obtained" />
-                        <DatePicker fx:id="dp_obtained" prefHeight="25.0" prefWidth="124.0" />
-                        <Button fx:id="bt_add_obtained" mnemonicParsing="false" prefHeight="25.0" prefWidth="65.0" text="Add" />
-                        <Button fx:id="bt_del_obtained" mnemonicParsing="false" prefHeight="25.0" prefWidth="71.0" text="Delete" />
-                        <Button fx:id="bt_upd_obtained" mnemonicParsing="false" prefHeight="25.0" prefWidth="84.0" text="Update" />
+                        <Label fx:id="lbObtained" prefHeight="17.0" prefWidth="78.0" text="Obtained" />
+                        <DatePicker fx:id="dpObtained" prefHeight="25.0" prefWidth="124.0" />
+                        <Button fx:id="btAddObtained" mnemonicParsing="false" prefHeight="25.0" prefWidth="65.0" text="Add" />
+                        <Button fx:id="btDelObtained" mnemonicParsing="false" prefHeight="25.0" prefWidth="71.0" text="Delete" />
+                        <Button fx:id="btUpdObtained" mnemonicParsing="false" prefHeight="25.0" prefWidth="84.0" text="Update" />
                      </children>
                   </HBox>
                   <HBox alignment="CENTER_RIGHT" layoutX="10.0" layoutY="10.0" prefHeight="32.0" prefWidth="205.0" spacing="10.0">
                      <children>
-                        <Label fx:id="lb_filter" text="Filter" />
-                        <ChoiceBox fx:id="cb_filtro" prefHeight="25.0" prefWidth="160.0" />
+                        <Label fx:id="lbFilter" text="Filter" />
+                        <ChoiceBox fx:id="cbFilter" prefHeight="25.0" prefWidth="160.0" />
                      </children>
                   </HBox>
                </children>
             </HBox>
             <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="30.0">
                <children>
-                  <Label fx:id="lb_search" text="Search" />
-                  <TextField fx:id="tf_search" />
+                  <Label fx:id="lbSearch" text="Search" />
+                  <TextField fx:id="txSearch" />
                </children>
             </HBox>
          </children>

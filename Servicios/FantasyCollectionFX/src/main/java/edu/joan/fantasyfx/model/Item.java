@@ -57,10 +57,9 @@ public class Item implements Serializable {
         this.rarity = rarity;
     }
 
-    public LocalDate getDate() {
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd - MMMM - yyyy");
-        formatter.format(date);
-        return this.date;
+    public String getDate() {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        return formatter.format(date);
     }
 
     public void setDate(LocalDate date) {
@@ -69,7 +68,7 @@ public class Item implements Serializable {
 
     @Override public String toString()
     {
-        return this.code + ";" +  this.name + ";" + this.type + ";" + this.rarity + ";" + this.date;
+        return this.code + ";" +  this.name + ";" + this.type + ";" + this.rarity + ";" + this.getDate();
     }
 
 }

@@ -8,6 +8,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.net.URL;
 import java.time.LocalDate;
@@ -51,6 +52,14 @@ public class MainController implements javafx.fxml.Initializable {
             loadItems();
         } catch (Exception e) {
             System.out.println(e.getMessage());
+        }
+
+        List<Item> items = new ArrayList<>();
+        items.add(new Item("A1", "A", "A", "A", LocalDate.now()));
+        try {
+            FileUtils.saveItems(items);
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
         }
     }
     public void loadItems()

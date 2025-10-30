@@ -4,6 +4,42 @@
     <meta charset="UTF-8" />
     <title>Registro al evento</title>
     <style>
+        :is(input[type="text"], input[type="email"], input[type="password"], input[type="number"], input[type="url"], textarea, select)
+        {
+            border: 1px solid ;
+            width: 100%;
+            border-radius: 10px;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        :is(input, textarea, select):focus
+        {
+            border-color: blue;
+            background-color: aquamarine;
+        }
+        :is(input, textarea, select):invalid
+        {
+            border-color: red;
+        }
+        :is(input, textarea, select):valid
+        {
+            border-color: green;
+        }
+        
+        label:has(:required)::before
+        {
+            content: '*';
+            color: red;
+        }
+        form:has(input[name="legal"]:invalid) .btn
+        {
+            pointer-events: none;
+            opacity: 0.5;
+        }
+        label:not(.acepto)
+        {
+            color: blue;
+        }
         
     </style>
 </head>

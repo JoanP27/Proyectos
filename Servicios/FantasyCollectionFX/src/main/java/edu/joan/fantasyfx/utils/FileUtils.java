@@ -25,7 +25,8 @@ public class FileUtils
         }*/
          List<Item> items = new ArrayList<Item>();
         try (Stream<String> reader = Files.lines(Paths.get("items.txt"))) {
-            items.addAll(reader.map(s->new Item(s.split(";")[0],s.split(";")[1],s.split(";")[2],s.split(";")[3], LocalDate.parse(s.split(";")[4], DateTimeFormatter.ofPattern("dd/MM/yyyy")))).toList());
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+            items.addAll(reader.map(s->new Item(s.split(";")[0],s.split(";")[1],s.split(";")[2],s.split(";")[3], LocalDate.parse(s.split(";")[4], formatter))).toList());
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

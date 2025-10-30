@@ -24,11 +24,5 @@ app.get('/listFiles', (req, res) => {
     const fr = new fileReader();
     let result = fr.listarArchivos();
     
-    lista = []
-
-    result.array.forEach(element => {
-        lista.append()
-    });
-
-    res.status(200).send(fr.listarArchivos());
+    res.status(200).send(result);
 })

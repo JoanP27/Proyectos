@@ -1,0 +1,13 @@
+GridPane {
+    -fx-background-color: #5095e2;
+}
+VBox {
+    -fx-background-color: #cae3f6;
+    -fx-padding: 10px;
+}
+Button
+{
+    -fx-border-color: black;
+    -fx-background-color: none;
+    -fx-border-radius: 9px;
+}

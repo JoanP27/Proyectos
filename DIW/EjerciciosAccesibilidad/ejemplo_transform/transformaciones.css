@@ -1,0 +1,70 @@
+body
+{
+    margin: 100px 20%;
+    font-family: Arial;
+}
+
+#contenedor
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 200px 200px;
+    gap: 50px;
+}
+
+#contenedor > section
+{
+    padding: 25%;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#caja1
+{
+    background-color: cadetblue;
+}
+
+#caja2
+{
+    background-color: coral;
+}
+
+#caja3
+{
+    background-color: darkseagreen;
+}
+
+#caja4
+{
+    background-color: goldenrod;
+}
+
+#caja5
+{
+    background-color: lightpink;
+}
+
+#caja1:hover
+{
+    transform: rotateY(45deg);
+}
+
+#caja2:hover
+{
+    transform: translate(50px, 10px);
+}
+
+#caja3:hover
+{
+    transform: scale(2, 0.5);
+}
+
+#caja4:hover
+{
+    transform: skew(25deg);
+}
+
+#caja5:hover
+{
+    transform: perspective(1000px) rotateX(45deg) translateZ(200px);
+}

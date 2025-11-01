@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Laboratorio de color CSS</title>
+    <style>
+        body
+        {
+            color: beige;
+        }
+        .transparencia
+        {
+            background-color: rgb(30, 100, 200);
+        }
+        .opacidad
+        {
+            opacity: 0.5;
+        }
+        .rgba
+        {
+            background-color: rgb(30, 100, 200, 0.5);
+        }
+        .cuadro
+        {
+            display: inline-block;
+            width: 100px;
+            border-radius: 9px;
+            height: 100px;
+        }
+        .modelo
+        {
+            display: inline-block;
+            width: 100px;
+            border-radius: 9px;
+            height: 100px;
+        }
+        .gradiente-lineal
+        {
+            background: linear-gradient(90deg, red, orange, yellow);
+        }
+        .gradiente-radial
+        {
+            background: radial-gradient(circle 40px, red 60%, orange, yellow);
+        }
+        .modelos .rgb
+        {
+            background-color: rgb(255,80,80);
+        }
+        .modelos .hsl
+        {
+            background-color: hsl(0,100%,65%);
+        }
+        .modelos .hwb
+        {
+            background-color: hwb(0 0% 10%)
+        }
+        .modelos .lch
+        {
+            background-color: lch(65% 85 25)
+        }
+        .modelos .modelo
+        {
+            box-shadow: 0 0px 10px black;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Laboratorio de Color CSS</h1>
+
+        <section class="bloque transparencia">
+            <h2>Transparencias</h2>
+            <div class="cuadro opacidad">Texto de prueba dentro del cuadro</div>
+            <div class="cuadro rgba">Texto de prueba dentro del cuadro</div>
+            <p>Ambos cuadros usan el mismo color base, pero la forma de aplicar la transparencia es distinta.</p>
+        </section>
+
+        <section class="bloque gradientes">
+            <h2>Degradados</h2>
+            <div class="cuadro gradiente-lineal">
+            </div>
+            <div class="cuadro gradiente-radial">
+            </div>
+            <p>Observa la diferencia entre un degradado lineal (izquierda) y radial (derecha).</p>
+        </section>
+
+        <section class="bloque modelos">
+            <h2>Modelos de color</h2>
+            <div class="modelo rgb">RGB</div>
+            <div class="modelo hsl">HSL</div>
+            <div class="modelo hwb">HWB</div>
+            <div class="modelo lch">LCH</div>
+            <p>Todas estas cajas representan un color aparentemente similar (rojo coral),
+                pero definido en distintos espacios de color.</p>
+        </section>
+    </main>
+</body>
+</html>

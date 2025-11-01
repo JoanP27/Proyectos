@@ -11,7 +11,6 @@ public class Item implements Serializable {
     private String type;
     private String rarity;
     private LocalDate date;
-
     public Item(String code)
     {
         this.code = code;

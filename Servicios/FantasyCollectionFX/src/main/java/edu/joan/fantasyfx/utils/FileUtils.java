@@ -13,6 +13,11 @@ import java.util.stream.Stream;
 
 public class FileUtils
 {
+    /**
+     * Loads the items from the items.txt file of the project
+     * @return returns the items list
+     * @throws FileNotFoundException thrown if file is not found
+     */
     public static List<Item> loadItems() throws FileNotFoundException {
         /*try(ObjectInputStream ois = new ObjectInputStream(new FileInputStream("items.txt")))
         {
@@ -23,15 +28,21 @@ public class FileUtils
         } catch (ClassNotFoundException e) {
             throw new RuntimeException(e);
         }*/
-         List<Item> items = new ArrayList<Item>();
+        List<Item> items = new ArrayList<Item>();
         try (Stream<String> reader = Files.lines(Paths.get("items.txt"))) {
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-            items.addAll(reader.map(s->new Item(s.split(";")[0],s.split(";")[1],s.split(";")[2],s.split(";")[3], LocalDate.parse(s.split(";")[4], formatter))).toList());
+            items.addAll(reader.map(s -> new Item(s.split(";")[0], s.split(";")[1], s.split(";")[2], s.split(";")[3], LocalDate.parse(s.split(";")[4], formatter))).toList());
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
         return items;
     }
+
+    /**
+     * Saves the list of items into the items.txt file
+     * @param items returns the list of items
+     * @throws FileNotFoundException thrown if file is not found
+     */
     public static void saveItems(List<Item> items) throws FileNotFoundException {
        /* try(ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("items.txt")))
         {

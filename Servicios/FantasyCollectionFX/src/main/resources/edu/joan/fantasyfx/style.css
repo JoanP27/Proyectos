@@ -1,3 +1,7 @@
+.label
+{
+    -fx-text-fill: gray;
+}
 GridPane {
     -fx-background-color: #5095e2;
 }
@@ -5,9 +9,10 @@ VBox {
     -fx-background-color: #cae3f6;
     -fx-padding: 10px;
 }
-Button
+.button
 {
     -fx-border-color: black;
-    -fx-background-color: none;
+    -fx-background-color: black;
     -fx-border-radius: 9px;
+    -fx-text-fill: white;
 }

@@ -1,0 +1,32 @@
+[
+  {
+    "ruta": "/home/joan/lectorMP3/audio2.mp3",
+    "titulo": "Imagine",
+    "autor": "John Lennon",
+    "duracion": "",
+    "album": "",
+    "genero": 13,
+    "anyo": "1999",
+    "comentario": "",
+    "version": "",
+    "caratula": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/21/e3/b0/21e3b048-c917-92c4-bd7d-ace44797b388/13UABIM52808.rgb.jpg/100x100bb.jpg",
+    "popularidad": "",
+    "enlaceItunes": "https://itunes.apple.com/search?entity\u003dsong\u0026limit\u003d1\u0026term\u003dImagine+John+Lennon",
+    "precio": 1.29
+  },
+  {
+    "ruta": "/home/joan/lectorMP3/id1.mp3",
+    "titulo": "LaserGun",
+    "autor": "",
+    "duracion": "",
+    "album": "abc",
+    "genero": 255,
+    "anyo": "2025",
+    "comentario": "",
+    "version": "",
+    "caratula": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/f6/ca/6d/f6ca6dad-3d5a-006c-dee4-67760b765109/192641626944_Cover.jpg/100x100bb.jpg",
+    "popularidad": "",
+    "enlaceItunes": "https://itunes.apple.com/search?entity\u003dsong\u0026limit\u003d1\u0026term\u003dLaserGun+",
+    "precio": 1.29
+  }
+]

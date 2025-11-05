@@ -22,6 +22,7 @@ namespace Pomares_Joan_GestionTareas03._01
 
 
 
+
         // METODOS CRUD
 
         // En cada método instanciamos un objeto de tipo TaskManagerDbContext que representa una conexion nueva con la base de datos
@@ -50,6 +51,17 @@ namespace Pomares_Joan_GestionTareas03._01
             }
         }
 
+
+        public async Task<User?> Listar(string username)
+        {
+            // Listamos un usuario por Nombre
+            using (var _context = new TaskManagerDbContext())
+            {
+                return await _context.Users
+                    .AsNoTracking()
+                    .FirstOrDefaultAsync(u => u.Usuario == username);
+            }
+        }
 
         public async Task<User> Insertar(User user)
         {
@@ -129,3 +141,5 @@ namespace Pomares_Joan_GestionTareas03._01
         }
     }
 }
+
+///<author> Joan Pomares Herrero</author>

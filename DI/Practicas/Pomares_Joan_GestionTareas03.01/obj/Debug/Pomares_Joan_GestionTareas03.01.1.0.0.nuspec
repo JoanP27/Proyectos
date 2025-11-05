@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Pomares_Joan_GestionTareas03.01</id>
+    <version>1.0.0</version>
+    <authors>Pomares_Joan_GestionTareas03.01</authors>
+    <description>Package Description</description>
+    <repository type="git" commit="0033c713bacb552814b30dd5c22987626f0b9daf" />
+    <dependencies>
+      <group targetFramework="net8.0-windows7.0">
+        <dependency id="Microsoft.EntityFrameworkCore" version="9.0.10" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.EntityFrameworkCore.SqlServer" version="9.0.10" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <frameworkReferences>
+      <group targetFramework="net8.0-windows7.0">
+        <frameworkReference name="Microsoft.WindowsDesktop.App.WPF" />
+      </group>
+    </frameworkReferences>
+  </metadata>
+  <files>
+    <file src="C:\Users\joano\Documents\Proyectos\Proyectos\DI\Practicas\Pomares_Joan_GestionTareas03.01\bin\Debug\net8.0-windows\Pomares_Joan_GestionTareas03.01.runtimeconfig.json" target="lib\net8.0-windows7.0\Pomares_Joan_GestionTareas03.01.runtimeconfig.json" />
+    <file src="C:\Users\joano\Documents\Proyectos\Proyectos\DI\Practicas\Pomares_Joan_GestionTareas03.01\bin\Debug\net8.0-windows\Pomares_Joan_GestionTareas03.01.dll" target="lib\net8.0-windows7.0\Pomares_Joan_GestionTareas03.01.dll" />
+  </files>
+</package>

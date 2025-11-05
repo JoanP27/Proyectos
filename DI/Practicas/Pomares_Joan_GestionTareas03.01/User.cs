@@ -25,5 +25,18 @@ namespace Pomares_Joan_GestionTareas03._01
         public int Activo { get; set; } = 0;
         public DateTime FechaCreacion { get; set; } = DateTime.UtcNow;
         public DateTime FechaBaja {  get; set; } = DateTime.UtcNow;
+
+        public User(int id, string usuario, string passwordHash, string? nombreCompleto, string? correoElectronico, int activo, DateTime fechaBaja)
+        {
+            Id = id;
+            Usuario = usuario;
+            PasswordHash = passwordHash;
+            NombreCompleto = nombreCompleto;
+            CorreoElectronico = correoElectronico;
+            Activo = activo;
+            FechaCreacion = DateTime.Now;
+            FechaBaja = fechaBaja;
+        }
     }
 }
+///<author> Joan Pomares Herrero</author>

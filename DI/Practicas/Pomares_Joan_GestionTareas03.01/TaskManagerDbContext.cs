@@ -9,6 +9,7 @@ public partial class TaskManagerDbContext : DbContext
     public TaskManagerDbContext() { }
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB; Initial Catalog = Tareas");
+        optionsBuilder.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB; Initial Catalog = Tareas_JPH");
     }
 }
+///<author> Joan Pomares Herrero</author>

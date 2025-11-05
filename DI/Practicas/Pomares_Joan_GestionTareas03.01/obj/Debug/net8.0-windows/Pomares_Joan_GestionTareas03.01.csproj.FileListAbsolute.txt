@@ -145,3 +145,5 @@ C:\Users\joano\Documents\Proyectos\Proyectos\DI\Practicas\Pomares_Joan_GestionTa
 C:\Users\joano\Documents\Proyectos\Proyectos\DI\Practicas\Pomares_Joan_GestionTareas03.01\obj\Debug\net8.0-windows\Pomares_Joan_GestionTareas03.01.pdb
 C:\Users\joano\Documents\Proyectos\Proyectos\DI\Practicas\Pomares_Joan_GestionTareas03.01\obj\Debug\net8.0-windows\Pomares_Joan_GestionTareas03.01.genruntimeconfig.cache
 C:\Users\joano\Documents\Proyectos\Proyectos\DI\Practicas\Pomares_Joan_GestionTareas03.01\obj\Debug\net8.0-windows\ref\Pomares_Joan_GestionTareas03.01.dll
+C:\Users\joano\Documents\Proyectos\Proyectos\DI\Practicas\Pomares_Joan_GestionTareas03.01\obj\Debug\net8.0-windows\LoginView.g.cs
+C:\Users\joano\Documents\Proyectos\Proyectos\DI\Practicas\Pomares_Joan_GestionTareas03.01\obj\Debug\net8.0-windows\LoginView.baml

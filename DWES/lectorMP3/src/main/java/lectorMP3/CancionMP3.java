@@ -20,6 +20,7 @@ public class CancionMP3 implements Serializable {
 	private String caratula = "";
 	private String popularidad= "";
 	private String enlaceItunes = "";
+	private String nombreArchivo = "";
 	private Float precio;
 	public String getRuta()
 	{
@@ -135,12 +136,25 @@ public class CancionMP3 implements Serializable {
 		this.precio = precio;
 	}
 
+	
+	public String getNombreArchivo() {
+		return nombreArchivo;
+	}
+
+	public void setNombreArchivo(String nombreArchivo) {
+		this.nombreArchivo = nombreArchivo;
+	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+
 	@Override
 	public String toString() {
 		return "CancionMP3 [ruta=" + ruta + ", titulo=" + titulo + ", autor=" + autor
 				+ ", duracion=" + duracion + ", album=" + album + ", genero=" + genero + ", anyo=" + anyo
 				+ ", comentario=" + comentario + ", version=" + version + ", caratula=" + caratula + ", popularidad="
-				+ popularidad + ", enlaceItunes=" + enlaceItunes + ", precio=" + precio + "]";
+				+ popularidad + ", enlaceItunes=" + enlaceItunes + ", precio=" + precio + "nombreArchivo=" + "]";
 	}
 
 	

@@ -9,8 +9,18 @@ export class TasksService
     {
         return this.#http.get(SERVER + "/tasks");
     }
-    insertTask()
+    insertTask(datos)
     {
-        return this.#http.post(SERVER+"/tasks", "");
+        console.log("A")
+        return this.#http.post(SERVER+"/tasks", datos);
+    }
+    deleteTask(id)
+    {
+        return this.#http.delete(SERVER+"/tasks/"+id)
+    }
+    changeTaskStatus(id, status)
+    {
+        return this.#http.put(SERVER+"/tasks/"+id, { status: status })
+
     }
 }

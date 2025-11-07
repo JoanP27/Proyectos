@@ -3,7 +3,6 @@ import {TasksService} from "./tasks.service.js";
 const previewImagen = document.getElementById("image-preview");
 const formImagen = document.getElementById("image");
 const taskForm = document.getElementById("task-form");
-const taskTemplate = document.getElementById("task-template")
 //se ejecuta con el input del campo de imagen, muesrtra la preview de la imagen, y la valida
 formImagen.addEventListener("input", function(event)
 {
@@ -63,7 +62,8 @@ taskForm.addEventListener("input", function(event)
     }
 })
 // añade la tarea y resetea el formulario
-taskForm.addEventListener("submit", function(event)
+// use async ya que asi esperara a la funcion taskservice de el resultado antes de redirigir al index, sin async la funcion redirige antes de que se haga el post
+taskForm.addEventListener("submit", async function(event)
 {
     event.preventDefault();
 
@@ -71,17 +71,24 @@ taskForm.addEventListener("submit", function(event)
 
     let datosForm = {
         title: taskForm["title"].value,
+        address: "",
+        filepath: "",
+        lat: 1,
+        lng: 0,
         description: taskForm["description"].value,
         image: document.getElementById("image-preview").src,
         deadLine: taskForm["deadLine"].value,
         status: 0
     }
+    
     const taskService = new TasksService();
-    console.log(taskService.insertTask('{ "title": "hola" }'))
-    console.log(datosForm)
+    await taskService.insertTask(datosForm);
     taskForm.reset();
     previewImagen.src = "";
     previewImagen.classList.add("hidden")
+    location.assign("index.html")
+
+
 })
 
 //Hecho por: Joan Pomares

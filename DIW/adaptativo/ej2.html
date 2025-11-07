@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF--8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Container Queries</title>
+    <style>
+        body
+        {
+            font-family: system-ui;
+            margin: 10px 5%;
+            background-color: white;
+        }
+        #contenedor
+        {
+            display: grid;
+            grid-template-columns: 25% 75%;
+            grid-template-rows: auto;
+            gap: 50px;
+        }
+        #miniaturas
+        {
+            container-type: inline-size;
+            container-name: miniaturas;
+        }
+        .evento
+        {
+            margin: 10px;
+            padding: 10px;
+            container-type: inline-size;
+            container-name: evento;
+        }      
+        @container miniaturas (max-width: 300px)
+        {
+            section{
+                border: 1px solid black;
+                border-radius: 9px;
+            }   
+            h2
+            {
+                font-size: 14pt;
+            }
+            p.subtitulo {
+                display: none
+            };
+        } 
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Próximos Eventos</h1>
+    </header>
+
+    <section id="contenedor">
+
+        <aside id="miniaturas">
+            <section class="evento">
+                <h2>Concierto de Jazz Nocturno</h2>
+                <p class="subtitulo">25 Octubre 2025, Gran Teatro</p>
+                <div class="contenido">
+                    <p>Una noche mágica con El Reno Renardo es un grupo musical español de heavy metal humorístico o freak metal, nacido de un proyecto en línea en solitario de Jevo Jevardo​. Tras dos años de bastante éxito en Internet, se decidió crear un concierto, para lo cual se reclutó al resto de miembros y se formó la banda en sí misma.</p>
+                </div>
+            </section>
+            <section class="evento">
+                <h2>Cuentos de Alberto Celdrán</h2>
+                <p class="subtitulo">12 Noviembre 2025, Explanada</p>
+                <div class="contenido">
+                    <p>El gran cuentacuentos Alberto Celdrán nos deleitará en la tarde noche del 12 de noviembre con una serie de cuentos fantásticos basados en la historia de África. Apto para grandes y pequeños, el autor interpretará diversos cuentos tradicionales africanos que cuentan la historia y creencias de esa tierra.</p>
+                </div>
+            </section>
+        </aside>
+
+        <main id="principal">
+            <section class="evento">
+                <h2>Concierto de Jazz Nocturno</h2>
+                <p class="subtitulo">25 Octubre 2025, Gran Teatro</p>
+                <div class="contenido">
+                    <p>Una noche mágica con El Reno Renardo es un grupo musical español de heavy metal humorístico o freak metal, nacido de un proyecto en línea en solitario de Jevo Jevardo​. Tras dos años de bastante éxito en Internet, se decidió crear un concierto, para lo cual se reclutó al resto de miembros y se formó la banda en sí misma.</p>
+                </div>
+            </section>
+            <section class="evento">
+                <h2>Cuentos de Alberto Celdrán</h2>
+                <p class="subtitulo">12 Noviembre 2025, Explanada</p>
+                <div class="contenido">
+                    <p>El gran cuentacuentos Alberto Celdrán nos deleitará en la tarde noche del 12 de noviembre con una serie de cuentos fantásticos basados en la historia de África. Apto para grandes y pequeños, el autor interpretará diversos cuentos tradicionales africanos que cuentan la historia y creencias de esa tierra.</p>
+                </div>
+            </section>
+        </main>
+
+    </div>
+</body>
+</html>

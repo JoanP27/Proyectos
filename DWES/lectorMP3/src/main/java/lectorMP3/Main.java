@@ -12,11 +12,7 @@ public class Main {
 	public static void main(String[] args)
 	{	
 		AccesoBBDD basedatos = new AccesoBBDD();
-		basedatos.comprobarConexion();
-		
-		
-		
-		
+		basedatos.comprobarConexion();		
 		try
 		{	
 			if(args.length < 1) { throw new IllegalArgumentException("Uso: lectorMp3.Main opcion");}
@@ -27,11 +23,23 @@ public class Main {
 					escribirFicheros(args[1], args[2]); break;
 				case "L": 
 					if(args.length < 2) { throw new IllegalArgumentException("Uso: lectorMp3.Main L ruta_archivo_canciones_guardadas"); }
-					leerFicheros(args[1]); break;
+					break;
 				case "J":
 					if(args.length < 3) { throw new IllegalArgumentException("Uso: lectorMp3.Main L ruta_archivo_canciones_guardadas"); }
 					crearJson(args[1], args[2]); break;
 				default: System.out.println("Uso: lectorMp3.Main opcion");
+			}
+
+			if(args[0].equals("L") && args.length > 1)
+			{
+
+				switch(args[1])
+				{
+					case "C": mostrarCancionesBBDD(); break;
+					case "A": mostrarArtistasBBDD(); break;
+					case "B": mostrarAlbumesBBDD(); break;
+					case "G": mostrarGenerosBBDD(); break;
+				}
 			}
 		}
 		catch(Exception e)
@@ -54,7 +62,7 @@ public class Main {
 		
 		AccesoBBDD basedatos = new AccesoBBDD();
 		try {
-			basedatos.gurdarCancion(clienteiTunes.getCanciones().get(0));
+			basedatos.guardarCancion(clienteiTunes.getCanciones());
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -85,6 +93,63 @@ public class Main {
 		}
 		catch (IOException e) {
 		    System.err.println("Error al escribir el archivo JSON");
+		}
+	}
+	public static void mostrarCancionesBBDD()
+	{
+		AccesoBBDD basedatos = new AccesoBBDD();
+		try {
+			List<CancionMP3> canciones = basedatos.listarCanciones();
+			basedatos.listarCanciones().forEach(c ->System.out.println(c));
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	public static void mostrarArtistasBBDD()
+	{
+		AccesoBBDD basedatos = new AccesoBBDD();
+		try {
+			List<String> canciones = basedatos.listarArtistas();
+			canciones.forEach(c -> System.out.println(c));
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+	public static void mostrarAlbumesBBDD()
+	{
+		AccesoBBDD basedatos = new AccesoBBDD();
+		try {
+			List<String> canciones = basedatos.listarAlbumes();
+			canciones.forEach(c -> System.out.println(c));
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	public static void mostrarGenerosBBDD()
+	{
+		AccesoBBDD basedatos = new AccesoBBDD();
+		try {
+			List<String> canciones = basedatos.listarGeneros();
+			canciones.forEach(c -> System.out.println(c));
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 	}
 	

@@ -80,6 +80,7 @@ public class LectorID3 {
 			nueva_cancion.setAnyo(anyo);
 			nueva_cancion.setComentario(comentario);
 			nueva_cancion.setGenero(genero);
+			nueva_cancion.setNombreArchivo(archivo.getName());
 			
 			listaDeCanciones.add(nueva_cancion);
 			

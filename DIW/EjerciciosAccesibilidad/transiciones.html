@@ -8,27 +8,56 @@
     
     body
     {
-        display: grid;
-        grid-template-columns: auto auto auto;
+        background-color: white;
+        gap: 10px;
     }
 
-    #caja1{
+    #caja1
+    {
+        float: left;
+        position: relative;
+        top:0px;
         width: 200px;
         height: 200px;
-        background: linear-gradient(90deg, white, orange);
+        background-color:rgb(255, 77, 77);
+        transition: top 5s;
+        &:hover
+        {
+            top: 200px;
+        }
     }
     #caja2
     {
+        float: left;
+        position: relative;
         width: 200px;
         height: 400px;
         background-color:rgb(255, 77, 77);
+        transition: background-color 2s linear;
+        &:hover
+        {
+            background-color:rgb(104, 77, 255);
+        }
     }
     #caja3
     {
+        float: left;
+        position: relative;
+        top: 0px;
         width: 300px;
         height: 100px;
+        border: 3px solid gray;
+        border-radius: 9px;
         box-shadow: 10px 10px 0px black;
+        transition: top 2s linear;
+        &:hover
+        {
+            top: 20px;
+        }
     }
+
+
+
     </style>
     
 </head>

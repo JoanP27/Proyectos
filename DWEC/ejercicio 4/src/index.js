@@ -1,15 +1,18 @@
 import {TasksService} from "./tasks.service.js";
+const taskTemplate = document.getElementById("task-template")
 
 const taskService = new TasksService();
 
-console.log(taskService.getTasks())
+const resultado = await taskService.getTasks();
 
-const resultado = taskService.getTasks();
 
-console.log(resultado);
+for (let i of resultado.properties)
+{
+    crearTarea(i)
+}
 
 // crea la tarea apartir de los datos en el eventListener anterior
-function cambiarTarea(valor, tarjeta)
+function cambiarTarea(valor, tarjeta, datos)
 {
     console.log(tarjeta, valor)
 
@@ -21,9 +24,10 @@ function cambiarTarea(valor, tarjeta)
 
     switch(valor)
     {
-        case '0': pendiente.append(tarjeta); break;;
-        case '1': enProceso.append(tarjeta); break;
-        case '2': terminada.append(tarjeta); break;
+        case '0': pendiente.append(tarjeta); taskService.changeTaskStatus(datos.id,valor); break;
+        case '1': enProceso.append(tarjeta); taskService.changeTaskStatus(datos.id,valor)
+        break;
+        case '2': terminada.append(tarjeta); taskService.changeTaskStatus(datos.id,valor); break;
     }
 }
 // cambia la tarea de contenedor
@@ -53,8 +57,15 @@ function crearTarea(datos)
 
     const select = contenido.children[4].firstElementChild
     const eliminar = contenido.children[4].lastElementChild
-    select.addEventListener("change", (event) => cambiarTarea(event.target.value, contenido))
-    eliminar.addEventListener("click", (event) => contenido.remove())
+    select.addEventListener("change", (event) => cambiarTarea(event.target.value, contenido, datos))
+    eliminar.addEventListener("click", (event) => eliminarTarea(contenido, datos))
 
 }
+
+function eliminarTarea(tarea, datosTarea)
+{
+    const resultadoEliminar = taskService.deleteTask(datosTarea.id)
+    tarea.remove()
+}
+
 //Hecho por: Joan Pomares
